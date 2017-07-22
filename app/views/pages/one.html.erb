@@ -1,2 +1,15 @@
-<h1>Pages#one</h1>
+<!DOCTYPE html>
+<html>
+<h1>HELLO</h1>
 <p>Find me in app/views/pages/one.html.erb</p>
+
+<form action="<%=pages_new_path%>" method="post">
+    <p>
+    Nombre: <input type="text" name="name"><br>
+    email: <input type="text" name="email"><br>
+    <input type="submit" value="Enviar"> <input type="reset">
+  </p>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+
+</html>
